@@ -1,5 +1,5 @@
 //sku模块
-import request from '@/utils/request';
+import request from '@/utils/brand-request';
 //sku列表的接口
 ///admin/product/list/{page}/{limit}
 export const reqSkuList = (page,limit)=>request({url:`/admin/product/list/${page}/${limit}`,method:'get'}); 

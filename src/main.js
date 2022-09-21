@@ -17,10 +17,16 @@ import '@/permission' // permission control
 // 引入相关API请求接口
 import API from '@/api'
 
+import CategorySelect from '@/components/CategorySelect'
+Vue.component(CategorySelect.name ,CategorySelect)
+
+import HintButton from '@/components/HintButton';
+Vue.component(HintButton.name,HintButton);
+
 // 任意组件可以使用API相关的接口
 Vue.prototype.$API = API
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'development') {
   const { mockXHR } = require('../mock')
   mockXHR()
 }
